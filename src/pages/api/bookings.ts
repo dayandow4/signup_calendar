@@ -15,7 +15,7 @@ const SPREADSHEET_ID = process.env.SPREADSHEET_ID!;
 const SHEET_NAME = 'bookings';
 
 // Simple in-memory cache for GET requests
-let cache: { timestamp: number; data: any[][] } | null = null;
+let cache: { timestamp: number; data: string[][] } | null = null;
 const CACHE_TTL = 30 * 1000; // 30 seconds
 
 export default async function handler(
